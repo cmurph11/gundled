@@ -23,12 +23,25 @@
             text-align: left;
         }
 
-        p, a {
+        p {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 24px;
-            text-decoration: none;
+            font-size: 20px; /* Reduced font size */
             color: white;
             margin: 5px 0;
+        }
+
+        a {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px; /* Reduced font size */
+            text-decoration: none;
+            color: white; /* Default link color */
+            margin: 5px 0;
+            transition: color 0.3s; /* Smooth transition for color change */
+        }
+
+        a:hover {
+            color: blue; /* Change link color on hover */
+            text-decoration: underline; /* Underline on hover */
         }
     </style>
 </head>
