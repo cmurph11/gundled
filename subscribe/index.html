@@ -39,10 +39,18 @@
         }
 
         /* Additional styles for the widget */
-        .sendgrid-subscription-widget input {
-            padding: .5em .5em .55em;
+        .sendgrid-subscription-widget form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sendgrid-subscription-widget input[type="email"] {
+            padding: .5em;
             font-size: 1em;
             font-family: serif;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
         .sendgrid-subscription-widget .sg-submit-btn {
@@ -52,13 +60,12 @@
             background: #ddd;
             box-shadow: 0 0 5px -1px rgba(0, 0, 0, .2);
             cursor: pointer;
-            vertical-align: middle;
-            max-width: 100px;
-            padding: .5em;
-            margin: 0 .4em;
+            padding: .5em 1em;
+            margin-left: 0.4em;
             text-align: center;
             font-size: .9em;
             font-family: sans-serif;
+            border-radius: 4px;
         }
 
         .sendgrid-subscription-widget .sg-submit-btn:active {
@@ -77,6 +84,7 @@
           data-token="cdc1f3e19306d6ec8ef579a130612905" 
           onsubmit="return false;">
         <div class="sg-response"></div>
+        <!-- Email input and submit button are now inline -->
         <input class="sg_email" type="email" name="sg_email" placeholder="Enter your email" required="required"> 
         <input type="submit" class="sg-submit-btn" id="widget-2997" value="Subscribe">
     </form>
