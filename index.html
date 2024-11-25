@@ -6,6 +6,7 @@
     <title>Gundled</title>
     <link rel="shortcut icon" type="image/x-icon" href="G.ico" />
     <style>
+        /* Body styling for full-page background and centering */
         body {
             margin: 0;
             height: 100vh;
@@ -15,47 +16,71 @@
             background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
+            font-family: sans-serif;
         }
 
+        /* Wrapper container to hold both logo and content containers */
+        .center-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Logo container styling */
+        .logo-container {
+            margin-bottom: 20px; /* Space between logo and links */
+        }
+
+        /* Logo image styling */
+        .logo-container img {
+            width: 360px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Content container for links */
         .content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            padding: 100px; /* Increased padding for better spacing */
-            border-radius: 80px; /* Optional: Round corners */
+            align-items: center;
+            text-align: center;
+            padding: 30px; /* Padding inside the container */
+            border-radius: 20px; /* Rounded corners */
             background: radial-gradient(circle, rgba(189, 181, 178, .8) 20%, rgba(255, 255, 255, 0) 60%);
-            margin: 80px; /* Space outside the content */
         }
 
-        img {
-            width: 120px; /* Set the width of the image to match text size */
-            height: auto; /* Maintain aspect ratio */
-            margin: 5px 0; /* Space around the image */
-        }
-
+        /* Link styling */
         a {
             font-family: 'Times New Roman', Times, serif;
-            font-size: 20px; /* Font size for links */
+            font-size: 20px;
             text-decoration: none;
-            color: white; /* Default link color */
-            margin: 5px 0;
-            transition: color 0.3s; /* Smooth transition for color change */
+            color: white;
+            margin: 10px 0; /* Space between links */
+            transition: color 0.3s;
         }
 
         a:hover {
-            color: blue; /* Change link color on hover */
-            text-decoration: underline; /* Underline on hover */
+            color: blue;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <img src="gundled.svg" alt="Gundled Logo">
-        <a href="https://cdn.forms-content-1.sg-form.com/a68f707d-a365-11ef-ab37-9280b2b714ce">subscribe</a>
-        <a href="https://www.instagram.com/gundled/" target="_blank">instagram</a>
-        <a href="mailto:info@gundled.com">contact</a>
-    </div>
+    <!-- Wrapper container for centering both logo and content containers -->
+    <div class="center-wrapper">
+        
+        <!-- Logo container -->
+        <div class="logo-container">
+            <img src="gundled.svg" alt="Gundled Logo">
+        </div>
+        
+        <!-- Content container for links -->
+        <div class="content">
+            <a href="subscribe.html">subscribe</a>
+            <a href="https://www.instagram.com/gundled/" target="_blank">instagram</a>
+            <a href="mailto:info@gundled.com">contact</a>
+        </div>
 
+    </div>
 </body>
 </html>
