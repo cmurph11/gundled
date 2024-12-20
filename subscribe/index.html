@@ -5,12 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscribe</title>
     <style>
+        /* Set the background image and center the content */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: serif;
+        }
+
         /* Style the subscription widget container */
         .sendgrid-subscription-widget {
             text-align: center;
             max-width: 300px;
             width: 100%;
-            margin: 0 auto; /* Center horizontally */
+        }
+
+        /* Style the Back link */
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0000FF;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
         }
 
         /* Additional styles for the widget */
@@ -47,52 +72,25 @@
             color: #8e8b8b;
             box-shadow: 0 0 5px -1px rgba(0, 0, 0, .6);
         }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('gundled.svg') repeat fixed;
-            background-size: 400px auto;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            z-index: -1;
-        }
-
-        .note {
-            margin-bottom: 20px;
-            font-size: 1em;
-            text-align: center;
-        }
-
-        .homepage-link {
-            margin-top: 20px;
-            font-size: 0.9em;
-            text-decoration: underline;
-            color: blue;
-        }
     </style>
+    <script type="text/javascript" defer src="//app.sgwidget.com/js/sg-widget-v2.js"></script>
 </head>
 <body>
-    <div class="note">Please confirm your email address from your inbox after submitting it here.</div>
-    <div class="sendgrid-subscription-widget">
-        <form action="#" method="POST">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit" class="sg-submit-btn">Subscribe</button>
-        </form>
-    </div>
-    <a href="/" class="homepage-link">Visit Homepage</a>
+
+<div class="sendgrid-subscription-widget widget-2997" 
+     data-emailerror="Please enter a valid email address" 
+     data-checkboxerror="Please tick the box to accept our conditions">
+    <form class="sg-widget" 
+          data-token="cdc1f3e19306d6ec8ef579a130612905" 
+          onsubmit="return false;">
+        <div class="sg-response"></div>
+        <!-- Email input and submit button are now inline -->
+        <input class="sg_email" type="email" name="sg_email" placeholder="Enter your email" required="required"> 
+        <input type="submit" class="sg-submit-btn" id="widget-2997" value="Subscribe">
+    </form>
+    <!-- Back link to homepage -->
+    <a href="https://gundled.com" class="back-link">Back</a>
+</div>
+
 </body>
 </html>

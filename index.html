@@ -1,336 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gundled</title>
-  <link rel="shortcut icon" type="image/x-icon" href="G.ico"/>
-<style>
-/* General body styling with background image */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gundled</title>
+    <link rel="shortcut icon" type="image/x-icon" href="G.ico" />
+    <style>
+        /* Body styling for full-page background and centering */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+        }
 
-/* Style the subscription widget container */
-.sendgrid-subscription-widget {
-    text-align: center;
+        /* Wrapper container to hold both logo and content containers */
+        .center-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-    margin: 0 auto; /* Center the widget */
-}
-/* Additional styles for the widget */
-.sendgrid-subscription-widget form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        /* Logo container styling */
+        .logo-container {
+            margin-bottom: 20px; /* Space between logo and links */
+        }
 
-.sendgrid-subscription-widget input[type="email"] {
-    padding: .5em;
-    font-size: .5em;
-    font-family: serif;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+        /* Logo image styling */
+        .logo-container img {
+            width: 360px; /* Set the width of the image */
+            height: auto; /* Maintain aspect ratio */
+        }
 
-.sendgrid-subscription-widget .sg-submit-btn {
-    display: inline-block;
-    color: #444;
-    border: 1px solid #ccc;
-    background: #ddd;
-    box-shadow: 0 0 5px -1px rgba(0, 0, 0, .2);
-    cursor: pointer;
-    padding: .5em 1em;
-    margin-left: 0.4em;
-    text-align: center;
-    font-size: .5em;
-    font-family: sans-serif;
-    border-radius: 4px;
-}
+        /* Content container for links */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px; /* Padding inside the container */
+            border-radius: 20px; /* Rounded corners */
+            background: radial-gradient(circle, rgba(189, 181, 178, .8) 20%, rgba(255, 255, 255, 0) 60%);
+        }
 
-.sendgrid-subscription-widget .sg-submit-btn:active {
-    color: #8e8b8b;
-    box-shadow: 0 0 5px -1px rgba(0, 0, 0, .6);
-}
+        /* Link styling */
+        a {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            margin: 10px 0; /* Space between links */
+            transition: color 0.3s;
+        }
 
-
-
-/* Floating centered secondary background image */
-#centered-image {
-  position: fixed; /* Fixed position to keep it in place while scrolling */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 50%;
-  width: 30%;
-  max-width: 400px; /* Optional max size */
-  min-width: 150px; /* Optional min size */
-  z-index: 1;
-}
-
-#centered-image img {
-  width: 100%;
-  height: auto;
-}
-
-/* Navigation bar styles */
-.topnav {
-  background-color: #ffffff;
-  overflow: hidden;
-  z-index: 10; /* Ensure the nav bar stays on top */
-  position: relative;
-}
-
-.topnav a {
-  float: left;
-  color: #0000EE;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  cursor: pointer;
-}
-
-.topnav a:hover {
-  color: #39FF14;
-}
-
-.topnav a.active {
-  background-color: #0000EE;
-  color: white;
-}
-
-/* About Section */
-#about {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Contact Section */
-#contact {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Subscribe Section */
-#subscribe {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Issue 1 Section */
-#issue1 {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Issue 2 Section */
-#issue2 {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Section Styles - Initially hidden */
-#home, #issue1, #issue2, #about, #contact, #subscribe {
-  display: none; /* Initially hidden */
-  padding: 20px;
-  position: relative;
-  z-index: 2; /* Appear above the background */
-}
-
-/* Projects Section - Style for image feed */
-.project-feed {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.project-feed img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  padding: 15px; /* Padding around each image */
-  margin: 0 auto; /* Ensure images are centered */
-}
-
-@media (max-width: 768px) {
-  #about {
-    font-size: 2em; /* Slightly smaller text on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  #about {
-    font-size: 1.7em; /* Even smaller text on very small screens */
-  }
-}
-</style>
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <!-- Wrapper container for centering both logo and content containers -->
+    <div class="center-wrapper">
+        
+        <!-- Logo container -->
+        <div class="logo-container">
+            <img src="gundled.svg" alt="Gundled Logo">
+        </div>
+        
+        <!-- Content container for links -->
+        <div class="content">
+            <a href="/subscribe">subscribe</a>
+            <a href="https://www.instagram.com/gundled/" target="_blank">instagram</a>
+            <a href="mailto:info@gundled.com">contact</a>
+        </div>
 
-<!-- Navigation bar -->
-<div class="topnav">
-  <a href="#" onclick="toggleSection('home')">gundled</a>
-  <a href="#" onclick="toggleSection('issue1')">issue 1</a>
-  <a href="#" onclick="toggleSection('issue2')">issue 2</a>
-  <a href="#" onclick="toggleSection('about')">about</a>
-  <a href="#" onclick="toggleSection('contact')">contact</a>
-  <a href="#" onclick="toggleSection('subscribe')">subscribe</a>
-</div>
-
-<!-- Secondary floating background image -->
-<div id="centered-image">
-  <img src="gundled.svg" alt="Gundled Logo">
-</div>
-
-<!-- Home Section -->
-<div id="home">
-</div>
-
-<!-- Projects Section -->
-<div id="issue1">
-  <div class="project-feed">
-    released June 14, 2024 <br><br>
-    contributors:<br>
-    Aldo Kempen<br>
-    Ben Miller<br>
-    Colin Murphy<br>
-    Eddie Baker<br>
-    Lara Lewison<br>
-    Sebsatjan Brank<br><br>
- 
-    edited and designed by Eddie Baker and Colin Murphy<br>
-    published by Spyros Rennt.
-    <br><br>
-    Here are a few (incomplete) spreads from the first issue. A complete scan of this zine is available for download via subscribtion to our email list (please confirm your email address, otherwise it won't send).
-    <br>
-
-    <img src="gallery/g1-1.jpg" alt="cover">
-    <img src="gallery/g1-2.jpg" alt="inset">
-    <img src="gallery/g1-3.jpg" alt="balkancore">
-    <img src="gallery/g1-15.jpg" alt="alt-circuit">
-    <img src="gallery/g1-20.jpg" alt="stabjanka">
-    <img src="gallery/g1-22.jpg" alt="m2m transexual">
-    <img src="gallery/g1-12.jpg" alt="tatts">
-    <img src="gallery/g1-19.jpg" alt="memes">
-    <img src="gallery/g1-10.jpg" alt="greta">
-    <img src="gallery/flyer_final.png" alt="flyer">
-  </div>
-</div>
-
-<!-- Projects Section -->
-<div id="issue2">
-  <div class="project-feed">
-    released December 6, 2024<br><br>
-    contributors: <br>
-    Tomi Haxhi <br>
-    Eddie Baker <br>
-    Colin Murphy<br>
-    <br>
-    Huge thanks to friends who sent us ideas and smut for the back pages:<br>
-    Anaury, Ashkan, Bebe, Ben, Blair, Brian, Caleb, Chris, Danna, Eric, Farah, Jacob, Josh, Juliet, Kari, Kira, Matt, Moritz, Noa, Patrick, Sebastjan, Silas, Syd, Valerio, Virgil, Yaki, and Zack <br><br>
-
- 
-    edited, designed and published by Eddie Baker and Colin Murphy.<br>
-    <br>
-    Our second issue is currently for sale at Printed Matter in New York and available by request.
-    <br>  <br>
-    Here are some images and objects we made for the launch.
-    <br> <br>
-
-    <img src="gallery/g2-2.jpg" alt="flyer">
-    <img src="gallery/g2-5.jpeg" alt="bracelets etcetera">
-    <img src="gallery/g2-7.jpeg" alt="zine front">
-    <img src="gallery/g2-8.jpeg" alt="zine back">
-    <img src="gallery/g2-9.jpeg" alt="screen">
-    <img src="gallery/g2-10.jpeg" alt="toilet">
-    <img src="gallery/g2-12.jpeg" alt="austerity">
-    <img src="gallery/g2-11.jpeg" alt="luxury">
-    <img src="gallery/g2-14.jpeg" alt="gnow globes">
-    <img src="gallery/g2-16.jpeg" alt="zine inlay">
-  </div>
-</div>
-
-<!-- About Section -->
-<div id="about">
-  iykyk, iydyd. Gundled is an art project by Colin Murphy and Eddie Baker.
-</div>
-
-<!-- Contact Section -->
-<div id="contact">
-    Get in touch: <br>
-    info (at) gundled (dot) com <br>
-    <a href="https://wwww.instagram.com/gundled">instagram </a> 
-</div>
-
-<!-- Subscribe Section -->
-<div id="subscribe">
-  <div class="sendgrid-subscription-widget widget-2997" 
-     data-emailerror="Please enter a valid email address" 
-     data-checkboxerror="Please tick the box to accept our conditions">
-    <form class="sg-widget" 
-          data-token="cdc1f3e19306d6ec8ef579a130612905" 
-          onsubmit="return false;">
-        <div class="sg-response"></div>
-        <!-- Email input and submit button are now inline -->
-        <input class="sg_email" type="email" name="sg_email" placeholder="Enter your email" required="required"> 
-        <input type="submit" class="sg-submit-btn" id="widget-2997" value="Subscribe">
-    </form>
-  </div>
-</div>
-
-<script>
-// Function to toggle sections when clicked
-function toggleSection(sectionId) {
-  // Hide all sections first
-  document.querySelectorAll('#home, #issue1, #issue2, #about, #contact, #subscribe').forEach(function(section) {
-    section.style.display = 'none';
-  });
-
-  // Show the clicked section
-  const sectionToShow = document.getElementById(sectionId);
-  sectionToShow.style.display = 'block';
-}
-</script>
-
+    </div>
 </body>
 </html>
