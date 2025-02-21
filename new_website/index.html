@@ -65,9 +65,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 50%;
+  opacity: 100%;
   width: 30%;
-  max-width: 400px; /* Optional max size */
+  max-width: 600px; /* Optional max size */
   min-width: 150px; /* Optional min size */
   z-index: 1;
 }
@@ -104,76 +104,23 @@ body {
   color: white;
 }
 
-/* About Section */
-#about {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
 
-/* Contact Section */
-#contact {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Subscribe Section */
-#subscribe {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Issue 1 Section */
-#issue1 {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
-
-/* Issue 2 Section */
-#issue2 {
-  color: white;
-  padding: 20px;
-  text-align: left; /* Left-justified text */
-  font-size: 2em; /* Larger font size for the "about" text */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* To sit above the background */
-}
 
 /* Section Styles - Initially hidden */
-#home, #issue1, #issue2, #about, #contact, #subscribe {
+#home {
   display: none; /* Initially hidden */
   padding: 20px;
   position: relative;
+  z-index: 2; /* Appear above the background */
+}
+
+/* Section Styles - Initially hidden */
+#issue1, #issue2, #gazette, #about, #contact, #subscribe {
+  display: none; /* Initially hidden */
+  padding: 20px;
+  position: relative;
+  color: #0000EE;
+  background-color: white;
   z-index: 2; /* Appear above the background */
 }
 
@@ -185,7 +132,7 @@ body {
 }
 
 .project-feed img {
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 8px;
   padding: 15px; /* Padding around each image */
@@ -212,6 +159,7 @@ body {
   <a href="#" onclick="toggleSection('home')">gundled</a>
   <a href="#" onclick="toggleSection('issue1')">issue 1</a>
   <a href="#" onclick="toggleSection('issue2')">issue 2</a>
+  <a href="#" onclick="toggleSection('gazette')">gazette</a>
   <a href="#" onclick="toggleSection('about')">about</a>
   <a href="#" onclick="toggleSection('contact')">contact</a>
   <a href="#" onclick="toggleSection('subscribe')">subscribe</a>
@@ -239,11 +187,13 @@ body {
     Sebsatjan Brank<br><br>
  
     edited and designed by Eddie Baker and Colin Murphy<br>
-    published by Spyros Rennt.
+    published by Spyros Rennt
     <br><br>
-    Here are a few (incomplete) spreads from the first issue. A complete scan of this zine is available for download via subscribtion to our email list (please confirm your email address, otherwise it won't send).
+    52 pages, edition of 150
     <br>
+    <a href="https://www.dropbox.com/scl/fi/5nhdbyx5npycdelk1t74u/gundled_one.pdf?rlkey=k06t6hw4ayea7p1gu0qz4q9lk&e=3&st=i49yh9g4&dl=0">download a scan of the complete zine here</a>
 
+    <br>
     <img src="gallery/g1-1.jpg" alt="cover">
     <img src="gallery/g1-2.jpg" alt="inset">
     <img src="gallery/g1-3.jpg" alt="balkancore">
@@ -266,40 +216,88 @@ body {
     Eddie Baker <br>
     Colin Murphy<br>
     <br>
-    Huge thanks to friends who sent us ideas and smut for the back pages:<br>
-    Anaury, Ashkan, Bebe, Ben, Blair, Brian, Caleb, Chris, Danna, Eric, Farah, Jacob, Josh, Juliet, Kari, Kira, Matt, Moritz, Noa, Patrick, Sebastjan, Silas, Syd, Valerio, Virgil, Yaki, and Zack <br><br>
-
+    Huge thanks to friends who sent us smut for the back pages:<br>
+    Anaury, Ashkan, Bebe, Ben, Blair, Brian, Caleb, Chris, Danna, Eric, <br>
+    Farah, Jacob, Josh, Juliet, Kari, Kira, Matt, Moritz, Noa, Patrick, <br>
+    Sebastjan, Silas, Syd, Valerio, Virgil, Yaki, and Zack <br><br>
  
-    edited, designed and published by Eddie Baker and Colin Murphy.<br>
-    <br>
-    Our second issue is currently for sale at Printed Matter in New York and available by request.
-    <br>  <br>
-    Here are some images and objects we made for the launch.
-    <br> <br>
+    edited, designed and published by Eddie Baker and Colin Murphy<br><br>
 
+    For this publication, we imagined SkyMall for tweakers, and produced a slew of nonsensical trinkets, treasures and merch to accompany the zine, including handmade pipette bottle snowglobes, a custom santal 33-mmc scent (thank you to our cat piss and cathinone inspired perfumer, Felipe Urrita), livestrong bracelets memorializing invented gay tragedies, and much more. 
+     <br><br>
+    40 pages, edition of 250
+    <br>
+    <a href="https://www.printedmatter.org/catalog/67828"/>currently available at printed matter</a>
+
+    <img src="gallery/g2-cover.jpg" alt="cover and back cover">
+    <img src="gallery/g2-inset.jpg" alt="inset">
+    <img src="gallery/g2-gundlezoic.jpg" alt="gundlezoic era">
+    <img src="gallery/g2-shop.jpg" alt="shop til you drop">
+    <img src="gallery/g2-dose.jpg" alt="dose away">
+    <img src="gallery/g2-sniffies.jpg" alt="sniffies">
+    <img src="gallery/g2-trolls.jpg" alt="our pitch">
+    <img src="gallery/g2-camp.jpg" alt="notes on camp">
+    <img src="gallery/g2-cover-undle.jpg" alt="cover undle">
     <img src="gallery/g2-2.jpg" alt="flyer">
     <img src="gallery/g2-5.jpeg" alt="bracelets etcetera">
-    <img src="gallery/g2-7.jpeg" alt="zine front">
-    <img src="gallery/g2-8.jpeg" alt="zine back">
     <img src="gallery/g2-9.jpeg" alt="screen">
     <img src="gallery/g2-10.jpeg" alt="toilet">
     <img src="gallery/g2-12.jpeg" alt="austerity">
     <img src="gallery/g2-11.jpeg" alt="luxury">
     <img src="gallery/g2-14.jpeg" alt="gnow globes">
-    <img src="gallery/g2-16.jpeg" alt="zine inlay">
+  </div>
+</div>
+
+<!-- Projects Section -->
+<div id="gazette">
+  <div class="project-feed">
+    released January 1, 2025<br><br>
+    contributors: <br>
+    Kay Gabriel <br>
+    Ratty De <br>
+    Eddie Baker<br>
+    Colin Murphy<br>
+    <br>
+
+    conver concept:<br>
+    Julio Torres<br><br>
+
+    AI image prompting:<br>
+    Leopold Wicht (@_gay_i)<br><br>
+
+    editors:<br>
+    Eddie Baker<br>
+    Colin Murphy<br><br>
+
+    design: <br>
+    Colin Murphy <br><br>
+
+    8 pages, edition of 2000
+    <br><br>
+
+    The Gundled Gazette was an 8-page newspaper developed for the New Year's edition of Zero Chill, a warehouse rave in New York run by Seva Granik and a wonderful team, listed in full below. The concept for the party was a sort of opaque and gruesomely yassified real-estate inspired gentrification nightmare (so, present day New York).<br><br>
+    We sourced classified ads from ravers in and around the city and invited two writers to collaborate on articles ranging from an internecine tabloid-style hit piece (Kay Gabriel) to a beautifully incomprehensible bastardization of real estate development marketing language (Patrick). Other ramblings included a contribution from renowned rat ethnographer and mal vivant McCalbie Fark (Eddie Baker) and our own analytical projections about the market.
+    <br><br>
+
+    Subscribe and confirm your email to download
+
+    <img src="gallery/gg-dirty1.jpg" alt="dirty shrapnel of the newspaper">
   </div>
 </div>
 
 <!-- About Section -->
 <div id="about">
-  iykyk, iydyd. Gundled is an art project by Colin Murphy and Eddie Baker.
+  iykyk iydyd <br> <br> Gundled is an art project by Colin Murphy and Eddie Baker
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
 <!-- Contact Section -->
 <div id="contact">
     Get in touch: <br>
     info (at) gundled (dot) com <br>
-    <a href="https://wwww.instagram.com/gundled">instagram </a> 
+    <a href="https://wwww.instagram.com/gundled">instagram</a> 
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
 <!-- Subscribe Section -->
@@ -322,7 +320,7 @@ body {
 // Function to toggle sections when clicked
 function toggleSection(sectionId) {
   // Hide all sections first
-  document.querySelectorAll('#home, #issue1, #issue2, #about, #contact, #subscribe').forEach(function(section) {
+  document.querySelectorAll('#home, #issue1, #issue2, #gazette, #about, #contact, #subscribe').forEach(function(section) {
     section.style.display = 'none';
   });
 
