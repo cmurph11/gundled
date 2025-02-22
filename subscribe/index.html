@@ -87,13 +87,22 @@
             color: blue;
         }
     </style>
+          <script type="text/javascript" defer src="//app.sgwidget.com/js/sg-widget-v2.js"></script>
 </head>
 <body>
+
+
     <div class="note">confirm your email address from your inbox after submitting it here.</div>
-    <div class="sendgrid-subscription-widget">
-        <form action="#" method="POST">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit" class="sg-submit-btn">Subscribe</button>
+<div class="sendgrid-subscription-widget widget-2997" 
+     data-emailerror="Please enter a valid email address" 
+     data-checkboxerror="Please tick the box to accept our conditions">
+    <form class="sg-widget" 
+          data-token="cdc1f3e19306d6ec8ef579a130612905" 
+          onsubmit="return false;">
+        <div class="sg-response"></div>
+        <!-- Email input and submit button are now inline -->
+        <input class="sg_email" type="email" name="sg_email" placeholder="Enter your email" required="required"> 
+        <input type="submit" class="sg-submit-btn" id="widget-2997" value="subscribe">
         </form>
     </div>
     <a href="/" class="homepage-link">return to homepage</a>
